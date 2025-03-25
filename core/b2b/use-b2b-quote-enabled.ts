@@ -11,7 +11,7 @@ export const useB2BQuoteEnabled = () => {
   useEffect(() => {
     const quoteConfigs = sdk?.utils?.quote?.getQuoteConfigs?.()
     const role = sdk?.utils?.user?.getProfile()?.role
-    if (!quoteConfigs || isNaN(Number(role))) {
+    if (!quoteConfigs || Number.isNaN(Number(role))) {
       return 
     }
 
