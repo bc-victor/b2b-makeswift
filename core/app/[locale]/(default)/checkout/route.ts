@@ -52,7 +52,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ loca
       channelId,
     });
 
-    console.log(data)
+    console.log(JSON.stringify(data, null, 2))
 
     if (
       data.cart.createCartRedirectUrls.errors.length > 0 ||
